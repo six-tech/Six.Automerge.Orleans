@@ -1,0 +1,14 @@
+<!-- Directory.Build.props for apps -->
+<Project>
+    <!-- Import parent Directory.Build.props -->
+    <Import Project="$(MSBuildThisFileDirectory)../Directory.Build.props"
+            Condition="Exists('$(MSBuildThisFileDirectory)../Directory.Build.props')"/>
+
+    <PropertyGroup>        
+        <TargetFramework>net9.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+    </ItemGroup>
+
+</Project>

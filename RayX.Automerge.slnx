@@ -1,0 +1,53 @@
+﻿<Solution>
+  <Folder Name="/Apps/">
+    <Project Path="apps/DemoApp.CollaborativeEditor/DemoApp.CollaborativeEditor.csproj" />
+    <Project Path="apps/DemoApp.CollaborativeTextEditor/DemoApp.CollaborativeTextEditor.csproj" />
+    <Project Path="apps/DemoApp.FigmaClone/DemoApp.FigmaClone.csproj" />
+    <Project Path="apps/DemoApp.TaskBoard/DemoApp.TaskBoard.csproj" />
+    <Project Path="apps/DemoApp.Shared/DemoApp.Shared.csproj" />
+    <Project Path="apps\DemoApp.Basic\DemoApp.Basic.csproj" />
+    <Project Path="apps\Infra.AppHost\Infra.AppHost.csproj" />
+    <Project Path="apps\Infra.Consts\Infra.Consts.csproj" />
+    <Project Path="apps\Infra.ServiceDefaults\Infra.ServiceDefaults.csproj" />
+    <Project Path="apps\Server.Api\Server.Api.csproj" />
+    <Project Path="apps\Server.Silo\Server.Silo.csproj" />
+    <File Path="apps\Directory.Build.props" />
+  </Folder>
+  <Folder Name="/Libs/">
+    <Project Path="libs\Ray.Automerge.FFI\Ray.Automerge.FFI.csproj" />
+    <Project Path="libs\Ray.Automerge.Repo.Abstractions\Ray.Automerge.Repo.Abstractions.csproj" />
+    <Project Path="libs\Ray.Automerge.Repo.Network.SignalR.Abstractions\Ray.Automerge.Repo.Network.SignalR.Abstractions.csproj" />
+    <Project Path="libs\Ray.Automerge.Repo.Network.SignalR.Client\Ray.Automerge.Repo.Network.SignalR.Client.csproj" />
+    <Project Path="libs\Ray.Automerge.Repo.Network.SignalR.Server\Ray.Automerge.Repo.Network.SignalR.Server.csproj" />
+    <Project Path="libs\Ray.Automerge.Repo.OrleansSync.Client\Ray.Automerge.Repo.OrleansSync.Client.csproj" />
+    <Project Path="libs\Ray.Automerge.Repo.OrleansSync.Server\Ray.Automerge.Repo.OrleansSync.Server.csproj" />
+    <Project Path="libs\Ray.Automerge.Repo.Storage.FileSystem\Ray.Automerge.Repo.Storage.FileSystem.csproj" />
+    <Project Path="libs\Ray.Automerge.Repo\Ray.Automerge.Repo.csproj" />
+    <Project Path="libs\Ray.Automerge\Ray.Automerge.csproj" />
+    <File Path="libs\Directory.Build.props" />
+    <File Path="libs\Directory.Build.targets" />
+  </Folder>
+  <Folder Name="/Tests/">
+    <Project Path="tests/Ray.SignalR.TestServer/Ray.SignalR.TestServer.csproj" />
+    <Project Path="tests\Ray.Automerge.FFI.Tests.Unit\Ray.Automerge.FFI.Tests.Unit.csproj" />
+    <Project Path="tests\Ray.Automerge.Repo.Network.SignalR.Tests.Integration\Ray.Automerge.Repo.Network.SignalR.Tests.Integration.csproj" />
+    <Project Path="tests\Ray.Automerge.Repo.Storage.FileSystem.Tests.Integration\Ray.Automerge.Repo.Storage.FileSystem.Tests.Integration.csproj" />
+    <Project Path="tests\Ray.Automerge.Repo.Storage.FileSystem.Tests.Unit\Ray.Automerge.Repo.Storage.FileSystem.Tests.Unit.csproj" />
+    <Project Path="tests\Ray.Automerge.Repo.Tests.Unit\Ray.Automerge.Repo.Tests.Unit.csproj" />
+    <Project Path="tests/DemoApp.Shared.Tests/DemoApp.Shared.Tests.csproj" />
+    <Project Path="tests/DemoApp.CollaborativeTextEditor.Tests/DemoApp.CollaborativeTextEditor.Tests.csproj" />
+    <Project Path="tests/DemoApp.CollaborativeEditor.Tests/DemoApp.CollaborativeEditor.Tests.csproj" />
+    <Project Path="tests/DemoApp.FigmaClone.Tests/DemoApp.FigmaClone.Tests.csproj" />
+    <Project Path="tests/DemoApp.TaskBoard.Tests/DemoApp.TaskBoard.Tests.csproj" />
+    <Project Path="tests\Ray.Tests.AppHost\Ray.Tests.AppHost.csproj" />
+    <File Path="tests\Directory.Build.props" />
+  </Folder>
+  <Folder Name="/_config/">
+    <File Path="CLAUDE.md" />
+    <File Path="Directory.Build.props" />
+    <File Path="global.json" />
+    <File Path=".gitignore" />
+    <File Path="docs\astro.config.mjs" />
+    <File Path="README.md" />
+  </Folder>
+</Solution>

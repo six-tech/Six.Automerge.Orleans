@@ -1,0 +1,72 @@
+name: .NET PR Build and Test
+
+on:
+  pull_request:
+    branches: [ main ]
+
+env:
+  DOTNET_VERSION: 10.0.100-preview.6
+
+jobs:
+  build-and-test:
+    name: Build and Test
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: read
+    steps:
+      # Check out the repository
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Set up .NET SDK (latest preview)
+      - name: Setup .NET SDK
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: ${{ env.DOTNET_VERSION }}
+          dotnet-quality: preview
+
+      # Verify Docker is available (pre-installed on GitHub runners)
+      - name: Verify Docker
+        run: |
+          docker --version
+          docker info
+          # Start Docker service if not running
+          sudo systemctl start docker || true
+
+      # Restore dependencies (includes Aspire NuGet packages)
+      - name: Restore dependencies
+        run: dotnet restore
+
+      # Build the solution
+      - name: Build
+        run: dotnet build --configuration Release --no-restore
+
+      # Run tests
+      - name: Run tests
+        run: dotnet tests-run.cs
+        working-directory: ./build
+        continue-on-error: false
+
+      # Run coverage tests
+      - name: Run coverage tests
+        run: dotnet tests-coverage.cs
+        working-directory: ./build
+        continue-on-error: false
+          
+      # Generate coverage report
+      - name: Generate coverage report
+        run: dotnet tests-report.cs
+        working-directory: ./build
+        continue-on-error: false
+
+      # Upload test results and coverage reports
+      - name: Upload test results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: test-results
+          path: |
+            tests/**/TestResults/**/*
+            coverage-reports/**/*
+          retention-days: 30
